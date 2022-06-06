@@ -77,7 +77,7 @@ const productoSumado = () => {
 }
 
 const carritoLleno = () => {
-    let lista = 'Te estás llevando esto ' + bienvenida + '\n';
+    let lista = 'Te estás llevando esto \n';
 
     let comprado = 1;
 
@@ -138,22 +138,36 @@ const vaciarCarrito = () => {
 
 // alert('Gracias ' + bienvenida + ' en breve recibirás un correo desde Raison Tandil para confirmar tu compra a la cuenta ' + correoContacto + '\nGracias por tu compra!');
 
-let divID = document.getElementById('ofertaspadre')
+// let divID = document.getElementById('ofertaspadre')
 
-const pruebaOffer = (a) => {
-    for (let offer of a) {
-        let div = document.createElement ('div')
-        div.className = 'ofertas'
-        div.innerHTML = 
-        `
-        <img src= "${offer.img}" alt="..."></img>
-        <h2>${offer.nombre}</h2>
-        <p> Precio: $ ${offer.precio}</p>
-        <button type="button" class="btn btn-secondary" id="${offer.nombre}">Comprar</button>
-        `
+// const pruebaOffer = (a) => {
+//     for (let offer of a) {
+//         let div = document.createElement ('div')
+//         div.className = 'ofertas'
+//         div.innerHTML = 
+//         `
+//         <img src= "${offer.img}" alt="..."></img>
+//         <h2>${offer.nombre}</h2>
+//         <p> Precio: $ ${offer.precio}</p>
+//         <button type="button" class="btn btn-secondary" id="botonazo">Comprar</button>
+//         `
         
-        divID.append (div)
-    }
-}
+//         divID.append (div)
+//     }
+// }
 
-pruebaOffer (productos)
+// pruebaOffer (productos)
+
+const verPrecio = document.getElementById ('botonazo')
+
+
+verPrecio.addEventListener ('click', productoSumado)
+
+const verCarrito = document.querySelector ('#carrito')
+
+verCarrito.addEventListener ('click', carritoLleno)
+
+window.open("http://www.desarrolloweb.com" , "ventana1" , "width=120,height=300,scrollbars=NO")
+// https://desarrolloweb.com/articulos/18.php <-- para abrir una ventana y mostrar que tiene el carrito
+
+// Problemas a solucionar en el codigo: Hacer que al presionar el boton comprar de cada una de las fotos ingrese ese producto al carrito. --  Conseguir una imagen del carrito y que los productos puedan verse desde alli -- Ver si podemos poner una ventana emergente en el carrito --- 
