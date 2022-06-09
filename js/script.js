@@ -1,58 +1,43 @@
-// // Pedir edad antes del ingreso
-
-// let permiso = parseInt(prompt('Antes de ingresar a la Tienda, necesitamos saber tu edad: (en números)'))
-// if (permiso >= 13) {
-//     alert('Podes pasar');
-
-// } else {
-//     alert('Por favor, llamá a tus papás antes de continuar');
-// }
-
-// // Bienvenida al usuario
-
-// let bienvenida = prompt('Hola! ¿Cómo te llamás?')
-// alert('Gracias por elegirnos ' + bienvenida)
-
-// Listado de productos
+//Listado de productos para trabajar
 
 const productos = [{
         codigo: 001,
-        nombre: 'Huertero',
+        nombre: 'huertero',
         img: "./images/ofertas1.jpeg",
         precio: 5000,
     },
 
     {
         codigo: 002,
-        nombre: 'Macetero',
+        nombre: 'macetero',
         img: "./images/ofertas3.jpeg",
         precio: 3000,
     },
 
     {
         codigo: 003,
-        nombre: 'Portafoco',
+        nombre: 'portafoco',
         img: "./images/ofertas5.jpeg",
         precio: 2500,
     },
 
     {
         codigo: 004,
-        nombre: 'Tablas de Cocina',
+        nombre: 'tabla',
         img: "./images/categoriahogar2.jpeg",
         precio: 2000,
     },
 
     {
         codigo: 005,
-        nombre: 'Mesa comedor',
+        nombre: 'mesa',
         img: "./images/novedades1.jpeg",
         precio: 8000,
     },
 
     {
         codigo: 006,
-        nombre: 'Espejo',
+        nombre: 'espejo',
         img: "./images/categoriadeco3.jpeg" ,
         precio: 3200,
     },
@@ -60,114 +45,30 @@ const productos = [{
 
 ]
 
-// Carrito y sus variables de agregar/ver y borrar productos
+// Carrito 
 const carrito = []
 
-const productoSumado = () => {
 
-    let lista = '';
-    for (const trabajo of productos) {
-        lista += trabajo.codigo + ' - ' + trabajo.nombre + ' - ' + trabajo.precio + '$' + '\n';
-    }
 
-    let productoElegido = parseInt(prompt(lista));
-    carrito.push(productos[productoElegido - 1]);
-    alert('Producto agregado!');
-
+const guardarProducto = (i) => {
+    let carga = productos[i]
+    carrito.push(carga);
+    alert(`Se agregó un/a ${carga.nombre}`);
+            
 }
 
-const carritoLleno = () => {
-    let lista = 'Te estás llevando esto \n';
-
-    let comprado = 1;
-
-    for (const listado of carrito) {
-        lista += comprado++ + ' - ' + listado.nombre + ' Valor: ' + listado.precio + '$' + '\n';
-    }
-
-    alert(lista);
+for (let i = 0; i < productos.length; i++) {
+    const elemento = productos[i];
+    document.getElementById(elemento.nombre).addEventListener ('click', function (){
+        guardarProducto(i)
+    })
+    
 }
 
-const vaciarCarrito = () => {
-    let lista = '¿Qué querés eliminar? ' + bienvenida + '\n';
-
-    let comprado = 1;
-
-    for (const listado of carrito) {
-        lista += comprado++ + ' - ' + listado.nombre + '\n';
-    }
-
-    let productoElegido = parseInt(prompt(lista));
-    carrito.splice(productoElegido - 1, 1);
-
-    alert('Producto eliminado :(');
-
-}
-
-// // Proceso de compra
-
-// let compra = prompt('Bienvenid@ ' + bienvenida + ' a la tienda de Raison Tandil! \nPara agregar productos a tu carrito, presioná 1. \nPara ver tus productos en el carrito, presioná 2. \nPara eliminar algún producto, presioná 3. \nPara confirmar la compra, presioná 0.')
-
-// const comprando = () => {
-
-//     while (compra != 0) {
-//         switch (compra) {
-//             case '1':
-//                 productoSumado();
-//                 break;
-//             case '2':
-//                 carritoLleno();
-//                 break;
-//             case '3':
-//                 vaciarCarrito();
-//                 break;
-//             default:
-//                 alert("Cargá una opción válida");
-//                 break;
-
-//         }
-//         compra = prompt(bienvenida + ' nos encanta que sigas en la tienda de Raison Tandil! \nPara agregar productos a tu carrito, presioná 1. \nPara ver tus productos en el carrito, presioná 2. \nPara eliminar algún producto, presioná 3. \nPara confirmar la compra, presioná 0.')
-//     }
-// }
-
-// comprando();
-
-// // Confirmación a un correo
-
-// let correoContacto = prompt('Por favor ' + bienvenida + ' registrá tu correo para confirmar la compra')
-
-// alert('Gracias ' + bienvenida + ' en breve recibirás un correo desde Raison Tandil para confirmar tu compra a la cuenta ' + correoContacto + '\nGracias por tu compra!');
-
-// let divID = document.getElementById('ofertaspadre')
-
-// const pruebaOffer = (a) => {
-//     for (let offer of a) {
-//         let div = document.createElement ('div')
-//         div.className = 'ofertas'
-//         div.innerHTML = 
-//         `
-//         <img src= "${offer.img}" alt="..."></img>
-//         <h2>${offer.nombre}</h2>
-//         <p> Precio: $ ${offer.precio}</p>
-//         <button type="button" class="btn btn-secondary" id="botonazo">Comprar</button>
-//         `
-        
-//         divID.append (div)
-//     }
-// }
-
-// pruebaOffer (productos)
-
-const verPrecio = document.getElementById ('botonazo')
 
 
-verPrecio.addEventListener ('click', productoSumado)
+// Problemas a solucionar en el codigo para la segunda entrega:  Conseguir una imagen del carrito y que los productos puedan verse desde alli -- Ver poner una ventana emergente en el carrito o abrir de una página aparte --- 
 
-const verCarrito = document.querySelector ('#carrito')
+//Importante corrección entre el DOM (que en este caso no me estaría aportando nada diferente)
 
-verCarrito.addEventListener ('click', carritoLleno)
-
-window.open("http://www.desarrolloweb.com" , "ventana1" , "width=120,height=300,scrollbars=NO")
-// https://desarrolloweb.com/articulos/18.php <-- para abrir una ventana y mostrar que tiene el carrito
-
-// Problemas a solucionar en el codigo: Hacer que al presionar el boton comprar de cada una de las fotos ingrese ese producto al carrito. --  Conseguir una imagen del carrito y que los productos puedan verse desde alli -- Ver si podemos poner una ventana emergente en el carrito --- 
+//Hacer un storage con la compra y manejarla.
