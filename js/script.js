@@ -65,8 +65,6 @@ for (let i = 0; i < productos.length; i++) {
     
 }
 
-
-
 // Problemas a solucionar en el codigo para la segunda entrega:  Conseguir una imagen del carrito y que los productos puedan verse desde alli -- Ver poner una ventana emergente en el carrito o abrir de una página aparte --- 
 
 //Importante corrección entre el DOM (que en este caso no me estaría aportando nada diferente)
