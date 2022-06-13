@@ -45,6 +45,7 @@ const productos = [{
 
 ]
 
+console.log(...productos);
 // Carrito 
 const carrito = []
 

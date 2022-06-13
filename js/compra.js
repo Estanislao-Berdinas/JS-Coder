@@ -36,7 +36,7 @@ for (let i = 0; i < carritoFinal.length; i++) {
  
 }
 
-function vaciarCarrito() { 
+let sinCarrito = function vaciarCarrito() { 
     carritoFinal = [];
     localStorage.setItem('carrito', JSON.stringify(carritoFinal))
     location.reload();
@@ -44,4 +44,7 @@ function vaciarCarrito() {
 }
 
 const volver = document.getElementById('volver')
-volver.addEventListener('click', vaciarCarrito) 
+volver.addEventListener('click', sinCarrito) 
+
+const carrito = JSON.parse(localStorage.getItem('carrito')) || []
+console.log(carrito);
