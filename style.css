@@ -81,7 +81,7 @@ p {
 
 }
 
-#ofertaspadre {
+.ofertaspadre {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -92,7 +92,7 @@ p {
 
 
 
-#ofertaspadre img {
+.ofertaspadre img {
     width: 100%;
     height: 400px;
     padding-top: 15px;
@@ -115,6 +115,10 @@ h5 {text-align: center;}
 #fotito {
     margin-top: 25px;
     
+}
+
+.hidden{
+    display: none;
 }
 
 

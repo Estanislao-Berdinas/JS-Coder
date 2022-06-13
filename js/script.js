@@ -53,6 +53,7 @@ const carrito = []
 const guardarProducto = (i) => {
     let carga = productos[i]
     carrito.push(carga);
+    localStorage.setItem('carrito', JSON.stringify(carrito))
     alert(`Se agregó un/a ${carga.nombre}`);
             
 }
@@ -62,11 +63,6 @@ for (let i = 0; i < productos.length; i++) {
     document.getElementById(elemento.nombre).addEventListener ('click', function (){
         guardarProducto(i)
     })
-    
+ 
 }
 
-// Problemas a solucionar en el codigo para la segunda entrega:  Conseguir una imagen del carrito y que los productos puedan verse desde alli -- Ver poner una ventana emergente en el carrito o abrir de una página aparte --- 
-
-//Importante corrección entre el DOM (que en este caso no me estaría aportando nada diferente)
-
-//Hacer un storage con la compra y manejarla.
