@@ -74,7 +74,7 @@ for (let i = 0; i < productos.length; i++) {
 }
 
 //Hacer que trabaje igual desde fetch
-let newArray = []
+
 
 let nuevosProductos = document.querySelector('#ofertaspadre');
 
@@ -96,22 +96,10 @@ fetch("./data.json")
                      
                     `
             
-            nuevosProductos.append(card);
-            console.log(card);
+            nuevosProductos.append();
+            console.log(data);
             
             
         
         })
-        data.forEach((item)=>{
-            newArray.push(item)
-        
-           // 1.- Para hacer un push de un atributo en particular acceder al eletemento actual y con "." a la propiedad deseada :
-           newArray.push(item.nombre)
-        
-           
-          })
-                 
-          // Imprimes tu arreglo para corroborar resultado.
-          console.log(newArray)
-    }
-)
+})
