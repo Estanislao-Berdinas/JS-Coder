@@ -49,13 +49,17 @@ console.log(...productos);
 // Carrito 
 const carrito = []
 
-
+//Guardado de productos en el carrito
 
 const guardarProducto = (i) => {
     let carga = productos[i]
     carrito.push(carga);
     localStorage.setItem('carrito', JSON.stringify(carrito))
-    alert(`Se agregó un/a ${carga.nombre}`);
+    Swal.fire({
+        title: 'Raison Tandil Compras',
+        text: 'Producto agregado con éxito',
+        icon: 'success',        
+    });
             
 }
 

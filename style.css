@@ -28,6 +28,9 @@ header {
 
 
 }
+#fotito:hover {
+    background-color: rgba(198, 198, 198, 0.5);
+}
 
 nav ul li {
     padding-top: 30px !important;
