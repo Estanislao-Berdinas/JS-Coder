@@ -45,9 +45,11 @@ const productos = [{
 
 ]
 
+
 console.log(...productos);
 // Carrito 
 const carrito = []
+
 
 //Guardado de productos en el carrito
 
@@ -71,3 +73,45 @@ for (let i = 0; i < productos.length; i++) {
  
 }
 
+//Hacer que trabaje igual desde fetch
+let newArray = []
+
+let nuevosProductos = document.querySelector('#ofertaspadre');
+
+fetch("./data.json")
+    .then((respuesta) => respuesta.json())
+    .then((data) => { 
+        data.forEach((elemento) => {
+            const card = document.createElement('div')
+            card.className = 'card';
+            card.innerHTML = `
+                    <div class="card" style="width: 18rem;">
+                        <img src=${elemento.img} class="card-img-top" alt="${elemento.nombre}" class=""card-img-top"></img>
+                        <div class="card-body">
+                        <h5 class="card-title">${elemento.nombre}</h5>
+                        <p class="card-text">Usalo en tu espacio favorito</p>
+                        <a href="#" class="btn btn-primary" id="${elemento.nombre}">Comprar</a>
+                        </div>
+                    </div>
+                     
+                    `
+            
+            nuevosProductos.append(card);
+            console.log(card);
+            
+            
+        
+        })
+        data.forEach((item)=>{
+            newArray.push(item)
+        
+           // 1.- Para hacer un push de un atributo en particular acceder al eletemento actual y con "." a la propiedad deseada :
+           newArray.push(item.nombre)
+        
+           
+          })
+                 
+          // Imprimes tu arreglo para corroborar resultado.
+          console.log(newArray)
+    }
+)
