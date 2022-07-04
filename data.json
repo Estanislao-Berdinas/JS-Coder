@@ -1,42 +1,42 @@
 [
     {
     "codigo": 1,
-    "nombre": "huertero",
+    "nombre": "Huertero",
     "img": "./images/ofertas1.jpeg",
     "precio": 5000
 },
 
 {
     "codigo": 2,
-    "nombre": "macetero",
+    "nombre": "Macetero",
     "img": "./images/ofertas3.jpeg",
     "precio": 3000
 },
 
 {
     "codigo": 3,
-    "nombre": "portafoco",
+    "nombre": "Portafoco",
     "img": "./images/ofertas5.jpeg",
     "precio": 2500
 },
 
 {
     "codigo": 4,
-    "nombre": "tabla",
+    "nombre": "Tabla",
     "img": "./images/categoriahogar2.jpeg",
     "precio": 2000
 },
 
 {
     "codigo": 5,
-    "nombre": "mesa",
+    "nombre": "Mesa",
     "img": "./images/novedades1.jpeg",
     "precio": 8000
 },
 
 {
     "codigo": 6,
-    "nombre": "espejo",
+    "nombre": "Espejo",
     "img": "./images/categoriadeco3.jpeg" ,
     "precio": 3200
 }

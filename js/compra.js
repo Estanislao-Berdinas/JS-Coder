@@ -44,6 +44,7 @@ const borrarProducto = (i) => {
         },
         onClick: function(){} // Callback after click
       }).showToast();
+      
     
       setTimeout(window.location.reload.bind(window.location), 3000);
     return false;
