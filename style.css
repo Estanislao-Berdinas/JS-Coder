@@ -141,3 +141,17 @@ a {
     color: none !important; 
     text-decoration: none !important;
 }
+
+#listaCarrito {
+    width: 60%;
+    align-content: center;
+    text-align: center;
+    margin: auto;
+}
+
+.total-general {
+    width: 80%;
+    align-content: center;
+    text-align: center;
+    margin: auto;
+}
