@@ -47,17 +47,6 @@ for (let i = 0; i < carritoFinal.length; i++) {
 }
 
 
-// // Funcion que suma el precio total de los productos del carrito
-// function carritoTotal() {
-//     let total = 0;
-//     let itemCarritoTotal = document.getElementById("total")
-//     carrito.forEach((Product) => {
-//         const precio = Product.price
-//         total = total + precio * Product.quantity
-//     })
-//     itemCartTotal.innerHTML = `TOTAL= u$s${total}`
-//     storageCart()
-// }
 //Borrar los productos del carrito
 
 const borrarProducto = (i) => {
