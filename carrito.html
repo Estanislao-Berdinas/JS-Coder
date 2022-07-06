@@ -57,29 +57,34 @@
     </div>
     <br>
 
-    <h3 id="total" class="list-group-item list-group-item-primary total-general"> El total es de: $0 </h3>
+    <h3 id="total" class="list-group-item list-group-item-danger total-general"> El total es de: $0 </h3>
     <br>
     <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
-      id="terminarCompra">
-      Presione aquí para terminar su compra
-    </button>
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap" id="compra-cerrada">Finalizar compra</button>
 
     <!-- Modal -->
-    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-      aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="staticBackdropLabel">Raison Tandil</h5>
+            <h5 class="modal-title" id="exampleModalLabel">Finalizar compra</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            Su compra ha sido realizada con éxito.
+            <form>
+              <div class="mb-3">
+                <label for="recipient-name" class="col-form-label">Mail:</label>
+                <input type="text" class="form-control" id="recipient-name">
+              </div>
+              <div class="mb-3">
+                <label for="message-text" class="col-form-label">Mensaje:</label>
+                <textarea class="form-control" id="message-text">Confirmo la compra realizada, quedo a la espera de la fecha de envío. </textarea>
+              </div>
+            </form>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="volver">Volver</button>
-
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Volver</button>
+            <button type="button" class="btn btn-primary" id="volver">Enviar</button>
           </div>
         </div>
       </div>

@@ -1,3 +1,5 @@
+//Ver contador de productos en el carrito
+
 const numeroCarrito = () => {
 let compraParcial = localStorage.getItem('carrito')
 let carritoParcial = JSON.parse(compraParcial);

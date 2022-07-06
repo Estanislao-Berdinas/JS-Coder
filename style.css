@@ -154,4 +154,21 @@ a {
     align-content: center;
     text-align: center;
     margin: auto;
+    font-weight: bolder;
+    font-style: italic;
+    
+}
+#compra-cerrada {
+    width: 90%;
+    margin-left: 5%;
+    font-size: 20px;
+    align-content: center;
+    
+}
+.uso-producto {
+    text-align: center
+}
+
+.precio-carrito {
+    text-align: center;
 }

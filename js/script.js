@@ -2,7 +2,7 @@
 
 const productos = []
 
-
+//Llamado a la lista de productos
 
 fetch('data.json')
     .then((respuesta) => {

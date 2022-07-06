@@ -15,12 +15,12 @@ for (let i = 0; i < carritoFinal.length; i++) {
     <img src= "${elemento.img}" class="card-img-top" alt="...">
     <div class= "card-body">
     <h5 class="card-title">${elemento.nombre}</h5>
-    <p class="card-text"> Precio: $ ${elemento.precio}</p>
+    <p class="card-text precio-carrito"> Precio: $ ${elemento.precio}</p>
     <button type="button" class="btn btn-primary" id="${elemento.nombre}">Eliminar</button>
     `
 
-
 }
+//Mostrar lista, cantidad y total en el carrito
 
 for (let i = 0; i < carritoFinal.length; i++) {
     const elemento = carritoFinal[i]
@@ -32,7 +32,7 @@ for (let i = 0; i < carritoFinal.length; i++) {
     console.log(listaCarrito);
     lista.innerHTML = `
      <ul class="list-group lista-precio">
-      <li class="list-group-item list-group-item-primary precio-unitario">${elemento.nombre} por un total de $ ${elemento.precio}</li>
+      <li class="list-group-item list-group-item-danger precio-unitario">${elemento.nombre} por un valor de $ ${elemento.precio}</li>
     </ul>
       `
     let total = 0;
@@ -42,7 +42,6 @@ for (let i = 0; i < carritoFinal.length; i++) {
         total = total + precio
     })
     carritoTotal.innerHTML = `El total es de : $ ${total}`
-
 
 }
 
@@ -87,7 +86,12 @@ for (let i = 0; i < carritoFinal.length; i++) {
 let sinCarrito = function vaciarCarrito() {
     carritoFinal = [];
     localStorage.setItem('carrito', JSON.stringify(carritoFinal))
-    location.reload();
+    Swal.fire({
+        title: 'Raison Tandil Compras',
+        text: 'Pronto nos comunicaremos con usted, gracias por elegirnos.',
+        icon: 'success',
+    });
+    setTimeout(window.location.reload.bind(window.location), 2500);
     return false;
 }
 
