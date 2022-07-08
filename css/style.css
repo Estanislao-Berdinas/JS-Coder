@@ -28,6 +28,7 @@ header {
 
 
 }
+
 #fotito:hover {
     background-color: rgba(198, 198, 198, 0.5);
 }
@@ -107,7 +108,7 @@ p {
     font-weight: bold;
     padding: 5px;
     margin-top: 10px;
-    
+
 }
 
 
@@ -120,25 +121,27 @@ p {
     width: 100%;
 }
 
-h5 {text-align: center;}
+h5 {
+    text-align: center;
+}
 
 #fotito {
     margin-top: 25px;
-    
+
 }
 
-.hidden{
+.hidden {
     display: none;
 }
 
 .imagen-carrito {
-    position:relative;
+    position: relative;
     display: inline-block;
     text-align: right;
 }
 
 a {
-    color: none !important; 
+    color: none !important;
     text-decoration: none !important;
 }
 
@@ -156,19 +159,51 @@ a {
     margin: auto;
     font-weight: bolder;
     font-style: italic;
-    
+
 }
+
 #compra-cerrada {
     width: 90%;
     margin-left: 5%;
     font-size: 20px;
     align-content: center;
-    
+
 }
+
 .uso-producto {
     text-align: center
 }
 
 .precio-carrito {
     text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+
+    .barra img {
+        height: 120px;
+        width: 120px;
+    }
+
+    .barra {
+        width: 90%;
+        height: 120px;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        padding: 5px;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .navbar {
+        padding: 0px;
+    }
+
+    nav ul li {
+        padding: 0px !important;
+    }
 }

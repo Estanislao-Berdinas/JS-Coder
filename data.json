@@ -39,7 +39,31 @@
     "nombre": "Espejo",
     "img": "./images/categoriadeco3.jpeg" ,
     "precio": 3200
-}
+    
+},
 
+{
+    "codigo": 7,
+    "nombre": "Mesita Ratona",
+    "img": "./images/categoriahogar1.jpeg" ,
+    "precio": 4000
+    
+},
+
+{
+    "codigo": 8,
+    "nombre": "Perchero",
+    "img": "./images/categoriadeco1.jpeg" ,
+    "precio": 3800
+    
+},
+
+{
+    "codigo": 9,
+    "nombre": "Baúl",
+    "img": "./images/novedades4.jpeg" ,
+    "precio": 3400
+    
+}
 
 ]

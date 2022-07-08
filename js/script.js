@@ -32,7 +32,7 @@ fetch('data.json')
             
             
         }
-
+        
         for (let i = 0; i < productos.length; i++) {
             const elemento = productos[i];
             document.getElementById(elemento.nombre).addEventListener('click', function () {
@@ -42,7 +42,7 @@ fetch('data.json')
         }
 
 
-               
+             
 
 
     })

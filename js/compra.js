@@ -46,32 +46,20 @@ for (let i = 0; i < carritoFinal.length; i++) {
 }
 
 
-//Borrar los productos del carrito
+//Borrar  productos del carrito
 
 const borrarProducto = (i) => {
     let carga = carritoFinal[i]
     carritoFinal.splice(i, 1);
     localStorage.setItem('carrito', JSON.stringify(carritoFinal))
-
-    Toastify({
-        text: `Se eliminará el producto: ${carga.nombre}`,
-        duration: 2000,
-        newWindow: true,
-        close: true,
-        offset: {
-            x: 30, // horizontal axis - can be a number or a string indicating unity. eg: '2em'
-            y: 200 // vertical axis - can be a number or a string indicating unity. eg: '2em'
-        },
-        position: "center", // `left`, `center` or `right`
-        stopOnFocus: true, // Prevents dismissing of toast on hover
-        style: {
-            background: "linear-gradient(to left, #bd3737bb, #bd37372f)",
-        },
-        onClick: function () {} // Callback after click
-    }).showToast();
-
-
-    setTimeout(window.location.reload.bind(window.location), 3000);
+    Swal.fire({
+        position: 'center',
+        icon: 'warning',
+        title: 'Producto eliminado',
+        showConfirmButton: false,
+        timer: 1500
+      })
+    setTimeout(window.location.reload.bind(window.location), 2000);
     return false;
 }
 
