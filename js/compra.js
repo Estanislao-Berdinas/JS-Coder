@@ -79,7 +79,7 @@ let sinCarrito = function vaciarCarrito() {
         text: 'Pronto nos comunicaremos con usted, gracias por elegirnos.',
         icon: 'success',
     });
-    setTimeout(window.location.reload.bind(window.location), 2500);
+    setTimeout(window.location.reload.bind(window.location), 4000);
     return false;
 }
 
