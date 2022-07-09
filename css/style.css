@@ -206,4 +206,9 @@ a {
     nav ul li {
         padding: 0px !important;
     }
+
+    #fotito {
+        width: 75px; 
+        height: 75px; 
+    }
 }
